@@ -69,6 +69,8 @@ RUN mkdir -p /var/www/html && \
     mkdir -p /var/lib/nginx && \
     chown -R www-data:root /var/www /usr/share/nginx/cache /var/cache/nginx /var/lib/nginx/
 
+RUN yum -y install wget
+
 # Install composer
 RUN wget https://getcomposer.org/installer -O /tmp/composer-setup.php && \
     wget https://composer.github.io/installer.sig -O /tmp/composer-setup.sig && \
